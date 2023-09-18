@@ -11,6 +11,16 @@ import {
 } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
+import {
+    BrowserRouter,
+    Link,
+    Outlet,
+    Route,
+    Routes,
+  } from "react-router-dom";
+
+  
+
 const useStyles = createStyles((theme) => ({
     wrapper: {
         display: 'flex',
@@ -109,15 +119,14 @@ const useStyles = createStyles((theme) => ({
 
 const mainLinksMockdata = [
     { icon: IconHome2, label: 'Home' },
-    { icon: IconGauge, label: 'Dashboard' },
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-    { icon: IconCalendarStats, label: 'Releases' },
+    { icon: IconCalendarStats, label: 'Management' },
     { icon: IconUser, label: 'Account' },
     { icon: IconFingerprint, label: 'Security' },
     { icon: IconSettings, label: 'Settings' },
 ];
 
-export function DoubleNavbar() {
+export function Sidebar() {
     const { classes, cx } = useStyles();
     const [active, setActive] = useState('Releases');
     const [activeLink, setActiveLink] = useState('Settings');
@@ -145,6 +154,9 @@ export function DoubleNavbar() {
                 <div className={classes.aside}>
                     {mainLinks}
                 </div>
+
+                <Outlet />
+
             </Navbar.Section>
         </Navbar>
     );
