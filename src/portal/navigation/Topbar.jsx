@@ -101,7 +101,7 @@ const useStyles = createStyles((theme) => ({
 
 }));
 
-export function Topbar() {
+export function Topbar(props) {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const { classes, theme } = useStyles();
@@ -114,15 +114,15 @@ export function Topbar() {
 
                     <Group sx={{ height: '100%' }} spacing={50} className={classes.links}>
 
-                        <Link to="" className={classes.link}>
+                        <Link to="" className={classes.link} onClick={()=>props.menuChange('dash')}>
                             <Text fz="lg">Dash</Text>
                         </Link>
-                        <Link to="crowd" className={classes.link}>
+                        <Link to="crowd" className={classes.link} onClick={()=>props.menuChange('crowd')}>
                             <Text fz="lg">Crowd</Text>
                         </Link>
-                        <Link to="crime" className={classes.link}>
+                        <Link to="crime" className={classes.link} onClick={()=>props.menuChange('crime')}>
                             <Text fz="lg">Crime</Text>
-                        </Link><Link to="inoffice" className={classes.link}>
+                        </Link><Link to="inoffice" className={classes.link} onClick={()=>props.menuChange('inoffice')}>
                             <Text fz="lg">Inoffice</Text>
                         </Link>
                     </Group>

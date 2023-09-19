@@ -20,7 +20,7 @@ import {
     Routes,
     useNavigate
 } from "react-router-dom";
-
+import { Dash } from '../tabs/Dash';
 
 
 const useStyles = createStyles((theme) => ({
@@ -119,20 +119,11 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-const mainLinksMockdata = [
-    { icon: IconHome2, label: 'Home' },
-    { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-    { icon: IconCalendarStats, label: 'Management' },
-    { icon: IconUser, label: 'Support' },
-    { icon: IconFingerprint, label: 'Security' },
-    { icon: IconSettings, label: 'Settings' },
-];
-
 export function Sidebar(props) {
     const { classes, cx } = useStyles();
     const [active, setActive] = useState('Home');
-    const [activeLink, setActiveLink] = useState('Settings');
     const navigate = useNavigate();
+    const [page, setPage] = useState(Dash);
 
     const mainLinks = props.menu.map((link) => (
         <Tooltip
@@ -145,6 +136,7 @@ export function Sidebar(props) {
             <UnstyledButton
                 onClick={() => {
                     setActive(link.label);
+                    setPage(link.page);
                 }}
                 className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
             >
@@ -160,7 +152,7 @@ export function Sidebar(props) {
                     {mainLinks}
                 </div>
 
-                <Outlet />
+                {page}
 
             </Navbar.Section>
         </Navbar>
