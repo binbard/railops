@@ -114,15 +114,15 @@ export function Topbar(props) {
 
                     <Group sx={{ height: '100%' }} spacing={50} className={classes.links}>
 
-                        <Link to="" className={classes.link} onClick={()=>props.menuChange('dash')}>
+                        <Link to="" className={classes.link} onClick={()=>props.tabChange('dash')}>
                             <Text fz="lg">Dash</Text>
                         </Link>
-                        <Link to="crowd" className={classes.link} onClick={()=>props.menuChange('crowd')}>
+                        <Link to="crowd" className={classes.link} onClick={()=>props.tabChange('crowd')}>
                             <Text fz="lg">Crowd</Text>
                         </Link>
-                        <Link to="crime" className={classes.link} onClick={()=>props.menuChange('crime')}>
+                        <Link to="crime" className={classes.link} onClick={()=>props.tabChange('crime')}>
                             <Text fz="lg">Crime</Text>
-                        </Link><Link to="inoffice" className={classes.link} onClick={()=>props.menuChange('inoffice')}>
+                        </Link><Link to="inoffice" className={classes.link} onClick={()=>props.tabChange('inoffice')}>
                             <Text fz="lg">Inoffice</Text>
                         </Link>
                     </Group>

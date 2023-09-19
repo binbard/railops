@@ -20,7 +20,7 @@ import {
     Routes,
     useNavigate
 } from "react-router-dom";
-import { Dash } from '../tabs/Dash';
+import { Dash } from '../tabs/Dash/Dash';
 
 
 const useStyles = createStyles((theme) => ({
@@ -123,9 +123,8 @@ export function Sidebar(props) {
     const { classes, cx } = useStyles();
     const [active, setActive] = useState('Home');
     const navigate = useNavigate();
-    const [page, setPage] = useState(Dash);
 
-    const mainLinks = props.menu.map((link) => (
+    const mainLinks = props.tab.map((link) => (
         <Tooltip
             label={link.label}
             position="right"
@@ -136,7 +135,7 @@ export function Sidebar(props) {
             <UnstyledButton
                 onClick={() => {
                     setActive(link.label);
-                    setPage(link.page);
+                    props.setPage(link.page);
                 }}
                 className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
             >
@@ -152,7 +151,7 @@ export function Sidebar(props) {
                     {mainLinks}
                 </div>
 
-                {page}
+                {props.page}
 
             </Navbar.Section>
         </Navbar>
