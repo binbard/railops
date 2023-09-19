@@ -128,13 +128,13 @@ const mainLinksMockdata = [
     { icon: IconSettings, label: 'Settings' },
 ];
 
-export function Sidebar() {
+export function Sidebar(props) {
     const { classes, cx } = useStyles();
     const [active, setActive] = useState('Home');
     const [activeLink, setActiveLink] = useState('Settings');
     const navigate = useNavigate();
 
-    const mainLinks = mainLinksMockdata.map((link) => (
+    const mainLinks = props.menu.map((link) => (
         <Tooltip
             label={link.label}
             position="right"
