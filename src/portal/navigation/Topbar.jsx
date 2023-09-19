@@ -128,7 +128,7 @@ export function Topbar() {
                     </Group>
 
                     <Group className={classes.hiddenMobile}>
-                        <a href=""><IconUserCircle size={30} style={{ fill: 'yellow' }} /></a>
+                        <a><IconUserCircle size={30} style={{ fill: '#dcdcdc', cursor: 'pointer' }} /></a>
                     </Group>
 
                     <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
@@ -145,19 +145,19 @@ export function Topbar() {
             >
                 <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md" >
                     <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-                    
-                    <Box className={classes.header}>
-                    <Link to="" className={classes.link}>
-                        <Text fz="lg">Dash</Text>
-                    </Link>
-                    <Link to="crowd" className={classes.link}>
-                        <Text fz="lg">Crowd</Text>
-                    </Link>
-                    <Link to="crime" className={classes.link}>
-                        <Text fz="lg">Crime</Text>
-                    </Link><Link to="inoffice" className={classes.link}>
-                        <Text fz="lg">Inoffice</Text>
-                    </Link>
+
+                    <Box className={classes.header} style={{margin: '10px', padding: '5px', borderRadius: '2%' }}>
+                        <Link to="" className={classes.link}>
+                            <Text fz="lg">Dash</Text>
+                        </Link>
+                        <Link to="crowd" className={classes.link}>
+                            <Text fz="lg">Crowd</Text>
+                        </Link>
+                        <Link to="crime" className={classes.link}>
+                            <Text fz="lg">Crime</Text>
+                        </Link><Link to="inoffice" className={classes.link}>
+                            <Text fz="lg">Inoffice</Text>
+                        </Link>
                     </Box>
 
                     <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />

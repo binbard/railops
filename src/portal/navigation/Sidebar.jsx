@@ -14,12 +14,14 @@ import { MantineLogo } from '@mantine/ds';
 import {
     BrowserRouter,
     Link,
+    Navigate,
     Outlet,
     Route,
     Routes,
-  } from "react-router-dom";
+    useNavigate
+} from "react-router-dom";
 
-  
+
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
@@ -121,15 +123,16 @@ const mainLinksMockdata = [
     { icon: IconHome2, label: 'Home' },
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
     { icon: IconCalendarStats, label: 'Management' },
-    { icon: IconUser, label: 'Account' },
+    { icon: IconUser, label: 'Support' },
     { icon: IconFingerprint, label: 'Security' },
     { icon: IconSettings, label: 'Settings' },
 ];
 
 export function Sidebar() {
     const { classes, cx } = useStyles();
-    const [active, setActive] = useState('Releases');
+    const [active, setActive] = useState('Home');
     const [activeLink, setActiveLink] = useState('Settings');
+    const navigate = useNavigate();
 
     const mainLinks = mainLinksMockdata.map((link) => (
         <Tooltip
@@ -140,7 +143,9 @@ export function Sidebar() {
             key={link.label}
         >
             <UnstyledButton
-                onClick={() => setActive(link.label)}
+                onClick={() => {
+                    setActive(link.label);
+                }}
                 className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
             >
                 <link.icon size="1.4rem" stroke={1.5} />
