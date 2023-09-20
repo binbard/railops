@@ -16,7 +16,10 @@
     "@mantine/hooks": "^6.0.20",
     "@mantine/prism": "^6.0.21",
     "@tabler/icons-react": "^2.34.0",
+    "chart.js": "^4.4.0",
+    "faker": "5.5.3",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0"
   },

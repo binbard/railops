@@ -20,9 +20,12 @@ import { Topbar } from "./navigation/Topbar.jsx";
 import { Sidebar } from "./navigation/Sidebar.jsx";
 import { Dash } from "./tabs/Dash/Dash.jsx";
 import { Analytics } from "./tabs/Dash/Analytics.jsx";
+import {Management} from "./tabs/Dash/Management.jsx";
+
 import { Crowd } from "./tabs/Crowd/Crowd.jsx";
 import { CrowdAnalytics } from "./tabs/Crowd/CrowdAnalytics.jsx";
 import { Crime } from "./tabs/Crime/Crime.jsx";
+
 import { CrimeAnalytics } from "./tabs/Crime/CrimeAnalytics.jsx";
 import { Inoffice } from "./tabs/Inoffice/Inoffice.jsx";
 import { InofficeAnalytics } from "./tabs/Inoffice/InofficeAnalytics.jsx";
@@ -33,7 +36,7 @@ const sidebarMenuAll = {
   dash: [
     { icon: IconHome2, label: 'Home', page: Dash },
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics', page: Analytics },
-    { icon: IconCalendarStats, label: 'Management', page: Inoffice },
+    { icon: IconCalendarStats, label: 'Management', page: Management },
     { icon: IconHelpOctagon, label: 'Support', page: Inoffice },
     { icon: IconSettings, label: 'Settings', page: Inoffice },
   ],
