@@ -31,26 +31,29 @@ import { Inoffice } from "./tabs/Inoffice/Inoffice.jsx";
 import { InofficeAnalytics } from "./tabs/Inoffice/InofficeAnalytics.jsx";
 import { AddEmployee } from "./tabs/Inoffice/AddEmployee.jsx";
 
+import { Settings } from "./pages/Settings.jsx";
+import { Support } from "./pages/Support.jsx";
+
 
 const sidebarMenuAll = {
   dash: [
     { icon: IconHome2, label: 'Home', page: Dash },
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics', page: Analytics },
     { icon: IconCalendarStats, label: 'Management', page: Management },
-    { icon: IconHelpOctagon, label: 'Support', page: Inoffice },
+    { icon: IconHelpOctagon, label: 'Support', page: Support },
     { icon: IconSettings, label: 'Settings', page: Inoffice },
   ],
   crowd: [
     { icon: IconHome2, label: 'Home', page: Crowd },
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics', page: CrowdAnalytics },
-    { icon: IconHelpOctagon, label: 'Support', page: Inoffice },
+    { icon: IconHelpOctagon, label: 'Support', page: Support },
     { icon: IconSettings, label: 'Settings', page: Inoffice },
   ],
   crime: [
     { icon: IconHome2, label: 'Home', page: Crime },
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics', page: CrimeAnalytics },
     { icon: IconFingerprint, label: 'Security', page: Inoffice },
-    { icon: IconHelpOctagon, label: 'Support', page: Inoffice },
+    { icon: IconHelpOctagon, label: 'Support', page: Support },
     { icon: IconSettings, label: 'Settings', page: Inoffice },
   ],
   inoffice: [
@@ -58,7 +61,7 @@ const sidebarMenuAll = {
     { icon: IconDeviceDesktopAnalytics, label: 'Analytics', page: InofficeAnalytics },
     { icon: IconUser, label: 'Add Employee', page: AddEmployee },
     { icon: IconCalendarStats, label: 'Management', page: Inoffice },
-    { icon: IconHelpOctagon, label: 'Support', page: Inoffice },
+    { icon: IconHelpOctagon, label: 'Support', page: Support },
     { icon: IconSettings, label: 'Settings', page: Inoffice },
   ]
 }
