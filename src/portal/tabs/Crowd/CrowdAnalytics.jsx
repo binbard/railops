@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import React from 'react';
 import {
   Chart as ChartJS,
@@ -8,23 +7,11 @@ import {
   Title,
   Tooltip,
   Legend,
-=======
-import { Container, Grid, Skeleton } from '@mantine/core';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
->>>>>>> Stashed changes
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 import faker from 'faker';
 
 ChartJS.register(
-<<<<<<< Updated upstream
   CategoryScale,
   LinearScale,
   BarElement,
@@ -135,160 +122,4 @@ export function CrowdAnalytics() {
       </SimpleGrid>
     </Container>
   );
-=======
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-);
-
-const labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        title: {
-            display: true,
-            text: 'Comparison Chart',
-        },
-    },
-};
-
-const data = {
-    labels,
-    datasets: [
-        {
-            label: 'dataset1',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        },
-        {
-            label: 'dataset2',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
-        },
-    ],
-};
-
-// Define data and options for your new graph
-const destinationColors = [
-    'rgba(23,24,67,1.4)',
-    'rgba(90,45,27,0.5)',
-    'rgba(45,20,17,2.3)',
-    'rgba(45,94,97,4.5)',
-    'rgba(38,28,90,6.7)',
-    'rgba(21,29,23,9.6)',
-];
-
-const newData = {
-    labels,
-    datasets: [
-        {
-            label: 'Platform',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: destinationColors[0],
-        },
-        {
-            label: 'Waiting Area',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: destinationColors[1],
-        },
-        {
-            label: 'Ticketing Counter',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: destinationColors[2],
-        },
-        {
-            label: 'Retail and Dining Zones',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: destinationColors[3],
-        },
-        {
-            label: 'Public Wi-Fi Zones',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: destinationColors[4],
-        },
-        {
-            label: 'Tourist Information Centers',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-            backgroundColor: destinationColors[5],
-        },
-    ],
-};
-
-const newOptions = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        title: {
-            display: true,
-            text: 'Destination Chart',
-        },
-    },
-};
-
-export function CrowdAnalytics() {
-    return (
-        <Container my="md">
-            <Grid gutter="md" style={{ width: '92vw', height: '80vh' }}>
-                <Grid.Col span={3}>
-                    <h1 style={{ fontSize: '24px', fontWeight: 'bold', margin: '0', textAlign: 'center' }}>CROWD DENSITY</h1>
-                    <h2 style={{ fontSize: '18px', margin: '0', textAlign: 'center' }}>345k+</h2>
-                </Grid.Col>
-                <Grid.Col span={3}>
-                    {/* <Skeleton color={grey}/> */}
-                </Grid.Col>
-                <Grid.Col span={3}>
-                    <h1 style={{ fontSize: '24px', fontWeight: 'bold', margin: '0' }}>AVERAGE DWELL TIME</h1>
-                    <h2 style={{ fontSize: '18px', margin: '0', textAlign: 'center' }}>30 min</h2>
-                </Grid.Col>
-                <Grid.Col span={3}>
-                    <h1 style={{ fontSize: '24px', fontWeight: 'bold', margin: '0', textAlign: 'center' }}>ENTRY AND EXIT RATES</h1>
-                    <h2 style={{ fontSize: '18px', margin: '0', textAlign: 'center' }}>60%</h2>
-                </Grid.Col>
-                <Grid.Col span={8}>
-                    <Bar options={options} data={data} />
-                </Grid.Col>
-                <Grid.Col span={4}>
-                    {/* <Skeleton height={200} radius="md" animate={false} /> */}
-                </Grid.Col>
-                <Grid.Col span={3}>
-                    <h1>Destination</h1>
-                    <li>Platform</li>
-                    <li>Waiting Area</li>
-                    <li>Ticketing Counter</li>
-                    <li>Retail and Dining areas</li>
-                    <li>Public Wi-Fi Zones</li>
-                </Grid.Col>
-                <Grid.Col span={3}>
-                    <h1>Crowd Diversity</h1>
-                    <li>NORTH</li>
-                    <li>SOUTH</li>
-                    <li>EAST</li>
-                    <li>WEST</li>
-                </Grid.Col>
-                <Grid.Col span={6}>
-                    <h1>Departments Workforce</h1>
-                    <li>Operations Department</li>
-                    <li>Engineering Department</li>
-                    <li>Mechanical Department</li>
-                    <li>Electrical Department</li>
-                    <li>Signaling and Telecommunications Department</li>
-                    <li>Traffic Commercial Department</li>
-                </Grid.Col>
-                <Grid.Col span={6} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-                    {/* Display the new graph */}
-                    <Bar options={newOptions} data={newData} />
-                </Grid.Col>
-            </Grid>
-        </Container>
-    );
->>>>>>> Stashed changes
 }
