@@ -27,8 +27,8 @@ import { CrowdAnalytics } from "./tabs/Crowd/CrowdAnalytics.jsx";
 import { Crime } from "./tabs/Crime/Crime.jsx";
 
 import { CrimeAnalytics } from "./tabs/Crime/CrimeAnalytics.jsx";
-import { Inoffice } from "./tabs/Inoffice/Inoffice.jsx";
-import { InofficeAnalytics } from "./tabs/Inoffice/InofficeAnalytics.jsx";
+import Inoffice  from "./tabs/Inoffice/Inoffice.jsx";
+import InofficeAnalytics from "./tabs/Inoffice/InofficeAnalytics.jsx";
 import { AddEmployee } from "./tabs/Inoffice/AddEmployee.jsx";
 
 import { Settings } from "./pages/Settings.jsx";
