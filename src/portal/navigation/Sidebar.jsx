@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createStyles, Navbar, UnstyledButton, Tooltip, Title, rem } from '@mantine/core';
 import {
     IconHome2,
@@ -21,6 +21,9 @@ import {
     useNavigate
 } from "react-router-dom";
 import { Dash } from '../tabs/Dash/Dash';
+import { Analytics } from '../tabs/Dash/Analytics';
+import { Support } from '../pages/Support';
+import { Settings } from '../pages/Settings';
 
 
 const useStyles = createStyles((theme) => ({
@@ -119,12 +122,13 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
+
 export function Sidebar(props) {
     const { classes, cx } = useStyles();
     const [active, setActive] = useState('Home');
     const navigate = useNavigate();
 
-    const mainLinks = props.tab.map((link) => (
+    const mainLinks = props.sidebar.map((link) => (
         <Tooltip
             label={link.label}
             position="right"
@@ -135,7 +139,7 @@ export function Sidebar(props) {
             <UnstyledButton
                 onClick={() => {
                     setActive(link.label);
-                    props.setPage(link.page);
+                    navigate(link.page);
                 }}
                 className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
             >
@@ -151,7 +155,7 @@ export function Sidebar(props) {
                     {mainLinks}
                 </div>
 
-                {props.page}
+                <Outlet />
 
             </Navbar.Section>
         </Navbar>

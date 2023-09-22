@@ -1,7 +1,9 @@
+import { Container } from "@mantine/core"
+
 export function Settings(){
     return(
-        <div>
-            <h1>Settings</h1>
-        </div>
+        <Container>
+            <h1>Support</h1>
+        </Container>
     )
 }

@@ -1,9 +1,9 @@
 import { Container } from "@mantine/core"
 
-export function InofficeAnalytics(){
+export function InofficeHome(){
     return(
         <Container>
-            <h1>Inoffice Analytics</h1>
+            <h1>Inoffice Home</h1>
         </Container>
     )
 }

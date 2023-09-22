@@ -21,22 +21,14 @@ import {
 } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
-import {
-    IconNotification,
-    IconCode,
-    IconBook,
-    IconChartPie3,
-    IconFingerprint,
-    IconCoin,
-    IconChevronDown,
-    IconUserCircle,
-} from '@tabler/icons-react';
+import { IconUserCircle } from '@tabler/icons-react';
 
 import {
     BrowserRouter,
     Link,
     Route,
     Routes,
+    useNavigate,
 } from "react-router-dom";
 
 
@@ -103,8 +95,8 @@ const useStyles = createStyles((theme) => ({
 
 export function Topbar(props) {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-    const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const { classes, theme } = useStyles();
+    const navigate = useNavigate();
 
     return (
         <>
@@ -114,15 +106,15 @@ export function Topbar(props) {
 
                     <Group sx={{ height: '100%' }} spacing={50} className={classes.links}>
 
-                        <Link to="" className={classes.link} onClick={()=>props.tabChange('dash')}>
+                        <Link to="" className={classes.link} onClick={()=>navigate('dash')}>
                             <Text fz="lg">Dash</Text>
                         </Link>
-                        <Link to="crowd" className={classes.link} onClick={()=>props.tabChange('crowd')}>
+                        <Link to="crowd" className={classes.link} onClick={()=>navigate('crowd')}>
                             <Text fz="lg">Crowd</Text>
                         </Link>
-                        <Link to="crime" className={classes.link} onClick={()=>props.tabChange('crime')}>
+                        <Link to="crime" className={classes.link} onClick={()=>navigate('crime')}>
                             <Text fz="lg">Crime</Text>
-                        </Link><Link to="inoffice" className={classes.link} onClick={()=>props.tabChange('inoffice')}>
+                        </Link><Link to="inoffice" className={classes.link} onClick={()=>navigate('inoffice')}>
                             <Text fz="lg">Inoffice</Text>
                         </Link>
                     </Group>
