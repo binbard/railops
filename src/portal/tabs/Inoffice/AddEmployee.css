@@ -1,0 +1,60 @@
+/* AddEmployee.css */
+
+.employee-table {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  table {
+    width: 220px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Add a hover effect for buttons */
+  }
+  
+  /* Add space between Edit and Delete buttons */
+  td button:first-child {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the Add Employee button */
+  button.add-employee {
+    background-color: #28a745;
+    margin-top: 20px;
+  }
+  
+  button.add-employee:hover {
+    background-color: #218838;
+  }
+  
