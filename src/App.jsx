@@ -6,7 +6,7 @@ import {
 
 import { Dashboard } from "./portal/Dashboard.jsx";
 import { Crime } from "./portal/tabs/Crime/Crime.jsx";
-import { Inoffice } from "./portal/tabs/Inoffice/Inoffice.jsx";
+import Inoffice from "./portal/tabs/Inoffice/Inoffice.jsx";
 import { Crowd } from "./portal/tabs/Crowd/Crowd.jsx";
 import { Dash } from "./portal/tabs/Dash/Dash.jsx";
 import './App.css'
