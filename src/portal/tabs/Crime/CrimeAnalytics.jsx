@@ -1,7 +1,8 @@
 import { Container, Grid, SimpleGrid, Skeleton, rem, Group, Paper, Text, ThemeIcon } from '@mantine/core';
 import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
+
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -12,11 +13,17 @@ import {
     Legend,
     PointElement,
     LineElement,
+    ArcElement
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
-import { Bar } from 'react-chartjs-2';
+import { Line, Pie, Bar } from 'react-chartjs-2';
 import faker from 'faker';
+ChartJS.register(ArcElement, Tooltip, Legend);
 
+// // import 'swiper/css';
+// // import 'swiper/css/pagination';
+// // import 'swiper/css/navigation';
+// import './css_1.css';
+// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 ChartJS.register(
@@ -41,7 +48,7 @@ export const option2 = {
         },
         title: {
             display: true,
-            text: 'Chart.js Bar Chart',
+            text: 'Last 12 Months',
         },
     },
 };
@@ -76,7 +83,9 @@ export const option1 = {
         },
         title: {
             display: true,
-            text: 'Chart.js Line Chart',
+
+            text: 'Last 15 days',
+
         },
     },
 };
@@ -89,8 +98,8 @@ const data1 = {
         {
             label: 'Crime activity',
             data: label1.map(([, value]) => value),
-            borderColor: 'rgb(53, 162, 235)',
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
+            borderColor: 'rgb(255, 102, 0)',
+            backgroundColor: 'rgb(255, 194, 153)',
         },
     ],
 };
@@ -148,27 +157,56 @@ export function StatsGridIcons() {
     );
 }
 
+//crowsel
+export const data4 = {
+    labels: ['Fire', 'Gun'],
+    datasets: [
+        {
+            label: '# of Votes',
+            data: [12, 19],
+            backgroundColor: [
+
+                //'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                // 'rgba(255, 159, 64, 0.2)',
+            ],
+            borderColor: [
+
+                // 'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                // 'rgba(255, 159, 64, 1)',
+            ],
+            borderWidth: 1,
+        },
+    ],
+};
 
 
 export function CrimeAnalytics() {
     return (
         <Grid gutter="md">
             <Grid.Col span={12} style={{ width: '1250px', height: '500px' }}>
+                <h1 style={{ textAlign: 'center' }}>Daily</h1>
                 <Line options={option1} data={data1} style={{ width: '1250px', height: '60px', paddingLeft: '30px' }} />;
             </Grid.Col>
-            <Grid.Col span={12}>
+            <Grid.Col span={12} style={{ width: '1250px', height: '250px', paddingTop: '100px' }}>
                 <StatsGridIcons />
             </Grid.Col>
             <Grid.Col span={8}>
-                <Skeleton height={40} radius="md" animate={false} />
+
             </Grid.Col>
             <Grid.Col span={4}>
-                <Skeleton height={40} radius="md" animate={false} />
+                <h1 style={{ textAlign: 'center' }}>Today</h1>
+                <Pie data={data4} Title={'Today'} />
             </Grid.Col>
             <Grid.Col span={12} style={{ width: '1250px', height: '500px' }}>
-                <Bar options={option2} data={data} style={{ width: '1100px', height: '60px', paddingLeft: '5px' }} />
+                <h1 style={{ textAlign: 'center' }}>Monthly</h1>
+                <Bar options={option2} data={data} style={{ width: '1100px', height: '60px', paddingLeft: '5px', paddingBottom: '30px' }} />
+                <div style={{ marginBottom: '50px' }}></div>
             </Grid.Col>
-        </Grid>
+        </Grid >
     )
 }
 
