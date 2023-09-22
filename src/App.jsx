@@ -22,7 +22,7 @@ import { DashHome } from "./portal/tabs/Dash/DashHome.jsx";
 import { CrimeHome } from "./portal/tabs/Crime/CrimeHome.jsx";
 import { CrowdHome } from "./portal/tabs/Crowd/CrowdHome.jsx";
 import { InofficeHome } from "./portal/tabs/Inoffice/InofficeHome.jsx";
-// import {Employees} from "./portal/tabs/Extra/Employees.jsx"
+import {Employees} from "./portal/tabs/Extra/Employees.jsx"
 
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           <Route exact path="inoffice" element={<Inoffice />}>
             <Route path="" element={<InofficeHome />} />
             <Route path="analytics" element={<InofficeAnalytics />} />
-            <Route path="employees" element={<AddEmployee />} />
+            <Route path="employees" element={<Employees />} />
           </Route>
           <Route exact path="support" element={<Support />} />
           <Route exact path="settings" element={<Settings />} />
