@@ -13,7 +13,7 @@ Recommended Nodev18 (16+ will work)
 
 2. Clone project
 ```
-git clone https://github.com/${USERNAME}/${REPO}
+git clone https://github.com/<your-username>/railops
 cd railops
 ```
 
