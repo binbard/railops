@@ -8,6 +8,7 @@ import Edit from './Edit';
 
 import "./employee.css";
 import { employeesData } from './Data';
+import { Container } from '@mantine/core';
 
 function Employees() {
 
@@ -50,7 +51,7 @@ function Employees() {
 
 
     return (
-        <div className='container'>
+        <Container>
             {/* List */}
             {!isAdding && !isEditing && (
                 <>
@@ -81,7 +82,7 @@ function Employees() {
                     setIsEditing={setIsEditing}
                 />
             )}
-        </div>
+        </Container>
     )
 }
 

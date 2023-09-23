@@ -225,7 +225,7 @@ export function DashHome() {
               }}
             >
               <div style={styles.number}>{armsAndAmmunitions}</div>
-              <div style={styles.label}>Arms and Ammunitions Detected</div>
+              <div style={styles.label}>Arms & Fires</div>
               <div style={{ ...styles.indicator, ...armsAndAmmunitionsColor }}></div>
             </div>
           </Grid.Col>
@@ -270,10 +270,10 @@ export function DashHome() {
             <Radar data={rdata} options={rconfig} />
           </Grid.Col>
           <Grid.Col span={3}>
-            <Skeleton height={160} radius="md" animate={false} />
+            {/* <Skeleton height={160} radius="md" animate={false} /> */}
           </Grid.Col>
           <Grid.Col span={6}>
-            <Skeleton height={200} radius="md" animate={false} />
+            {/* <Skeleton height={200} radius="md" animate={false} /> */}
           </Grid.Col>
         </Grid>
       </Container>

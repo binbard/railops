@@ -1,3 +1,4 @@
+import { Button } from '@mantine/core';
 import React from 'react'
 
 function List({ employees, handleEdit, handleDelete }) {
@@ -35,20 +36,21 @@ function List({ employees, handleEdit, handleDelete }) {
                                 <td>{formatter.format(employee.salary)}</td>
                                 <td>{employee.date} </td>
                                 <td className="text-right">
-                                    <button
+                                    <Button
                                         onClick={() => handleEdit(employee.id)}
                                         className="button muted-button"
+                                        style={{background:'grey'}}
                                     >
                                         Edit
-                                    </button>
+                                    </Button>
                                 </td>
                                 <td className="text-left">
-                                    <button
+                                    <Button
                                         onClick={() => handleDelete(employee.id)}
-                                        className="button muted-button"
+                                        className="button muted-button pui"
                                     >
                                         Delete
-                                    </button>
+                                    </Button>
                                 </td>
                             </tr>
                         ))
