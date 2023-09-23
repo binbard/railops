@@ -14,7 +14,7 @@ export function InofficeAnalytics() {
                     <img ref={mainCam} id="main_cam" src="http://127.0.0.1:5000/video_feed_inoffice" alt="webcam" style={{ height: '440px', border: '2px solid red' }} />
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <img src="http://127.0.0.1:5000/video_feed" alt="webcam" style={{ height: '200px', border: '2px solid red' }} />
+                    <img src="http://127.0.0.1:5000/video_feed_inoffice" alt="webcam" style={{ height: '200px', border: '2px solid red' }} />
                 </Grid.Col>
                 <Grid.Col span={2}>
                 </Grid.Col>

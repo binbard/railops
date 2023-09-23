@@ -45,7 +45,7 @@ function App() {
             <Route path="analytics" element={<CrimeAnalytics />} />
           </Route>
           <Route exact path="inoffice" element={<Inoffice />}>
-            <Route path="" element={<InofficeHome />} />
+            <Route path="" element={<Employees />} />
             <Route path="analytics" element={<InofficeAnalytics />} />
             <Route path="employees" element={<Employees />} />
           </Route>
