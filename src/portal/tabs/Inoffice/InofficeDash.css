@@ -1,0 +1,72 @@
+/* InofficeAnalytics.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+    padding: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-between; /* Evenly space the cards */
+    background-color: #f5f5f5; /* Light gray background */
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 20px; /* Add padding to center-align the cards */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align card content */
+    justify-content: center; /* Center-align number vertically */
+    height: 150px;
+    width: 220px;
+    background-color: skyblue; /* White background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    flex-grow: 1;
+    font-size: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.2s, background-color 0.2s; /* Add smooth transitions */
+  }
+  
+  /* Hover effect for cards */
+  .card:hover {
+    transform: scale(1.05);
+    background-color: cornflowerblue; /* Lighter gray background on hover */
+  }
+  
+  .daily-attendance-graph,
+  .employee-attendance-graph {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%; /* Slightly reduce width for side-by-side display */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    margin-bottom: 20px;
+  }
+  
+  .graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-right: -10px;
+    width: 100%;
+  }
+  
+  h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the main content section */
+  .main-content {
+    background-color: #f9f9f9; /* Light background for the main content */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  

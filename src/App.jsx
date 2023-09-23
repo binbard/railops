@@ -23,6 +23,7 @@ import { CrimeHome } from "./portal/tabs/Crime/CrimeHome.jsx";
 import { CrowdHome } from "./portal/tabs/Crowd/CrowdHome.jsx";
 import { InofficeHome } from "./portal/tabs/Inoffice/InofficeHome.jsx";
 import {Employees} from "./portal/tabs/Extra/Employees.jsx"
+import InofficeDash from "./portal/tabs/Inoffice/InofficeDash.jsx";
 
 
 function App() {
@@ -45,7 +46,7 @@ function App() {
             <Route path="analytics" element={<CrimeAnalytics />} />
           </Route>
           <Route exact path="inoffice" element={<Inoffice />}>
-            <Route path="" element={<Employees />} />
+            <Route path="" element={<InofficeDash />} />
             <Route path="analytics" element={<InofficeAnalytics />} />
             <Route path="employees" element={<Employees />} />
           </Route>
